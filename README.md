@@ -42,5 +42,6 @@ Route::resource('patients.metrics');
 ```
 
 ## to run
-composer install
+(composer install)
+
 php -S localhost:8080 .\tests\test.php
