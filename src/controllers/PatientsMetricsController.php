@@ -1,20 +1,14 @@
 <?php
 
-namespace Excercise\controllers;
+namespace Practice\controllers;
 
 class PatientsMetricsController
 {
-    public static function index()
+    public static function __callStatic($method, $args)
     {
-        echo "<pre>";
-        echo "PatientsMetricsController index method called\n";
-        echo "</pre>";
-    }
-
-    public static function show($id)
-    {
-        echo "<pre>";
-        echo "PatientsMetricsController show method called with ID: $id\n";
-        echo "</pre>";
+        echo json_encode([
+            'method name' => $method,
+            'arguments' => $args,
+        ], JSON_PRETTY_PRINT);
     }
 }
